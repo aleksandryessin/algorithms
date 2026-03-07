@@ -11,10 +11,11 @@ public class App_6_5_checkPermutation {
         
         int[] countLetters = new int[26];
         for (int i = 0; i < s1.length(); i++){
-            countLetters[s1.charAt(i) - 'a']++;
-            countLetters[s2.charAt(i) - 'a']--;
+            countLetters[s1.charAt(i) - 'a']++; // 'a' = 97 позиция индекса (начиная с 97 кода - а нам надо, чтобы они начинались с 0)
+            countLetters[s2.charAt(i) - 'a']--; 
         }
 
+        // если строки по символам совпадут - то в массиве-счетчике все символы будут равны 0.
         for(int i = 0; i < countLetters.length; i++){
             if (countLetters[i] != 0) return false;
         }

@@ -17,4 +17,4 @@ if __name__=="__main__":
     char_list2 = 'abcdef'
     print(is_unique(char_list1))
     print(is_unique(char_list2))
-        
+    
